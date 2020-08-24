@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "example": "webpack-dev-server --content-base ./example/ --config ./example/webpack.config.js",
     "build-example": "webpack --content-base ./example/ --config ./example/webpack.config.js --output ./dist/example.js",
-    "postinstall": "prepublish"
+    "postinstall": "cd ./node_modules/react-treebeard && npm install && npm run build"
   },
   "peerDependencies": {
     "@babel/runtime": ">=7.0.0",
