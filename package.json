@@ -4,15 +4,12 @@
   "description": "React Tree View Component",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run build",
     "test": "jest --config=jest.config.js",
     "test:watch": "jest --config=jest.config.js --watch",
     "test:coverage": "jest --config=jest.config.js --coverage",
     "lint": "eslint .",
     "example": "webpack-dev-server --content-base ./example/ --config ./example/webpack.config.js",
     "build-example": "webpack --content-base ./example/ --config ./example/webpack.config.js --output ./dist/example.js",
-    "compile": "babel src/ --out-dir dist/",
-    "prepare": "npm run compile"
   },
   "peerDependencies": {
     "@babel/runtime": ">=7.0.0",
