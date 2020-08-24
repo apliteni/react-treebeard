@@ -11,7 +11,8 @@
     "test:coverage": "jest --config=jest.config.js --coverage",
     "lint": "eslint .",
     "example": "webpack-dev-server --content-base ./example/ --config ./example/webpack.config.js",
-    "build-example": "webpack --content-base ./example/ --config ./example/webpack.config.js --output ./dist/example.js"
+    "build-example": "webpack --content-base ./example/ --config ./example/webpack.config.js --output ./dist/example.js",
+    "postinstall": "prepublish"
   },
   "peerDependencies": {
     "@babel/runtime": ">=7.0.0",
