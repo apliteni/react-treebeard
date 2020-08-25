@@ -2,13 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 class Container extends PureComponent {
-    renderToggle() {
-
-        return (
-            {this.renderToggleDecorator()}
-        );
-    }
-
     renderToggleDecorator() {
         const {style, decorators, onClick} = this.props;
         return <decorators.Toggle style={style.toggle} onClick={onClick}/>;
@@ -20,7 +13,7 @@ class Container extends PureComponent {
         } = this.props;
         return (
             <div style={node.active ? {...style.container} : {...style.link}}>
-                {!terminal ? this.renderToggle() : null}
+                {!terminal ? this.renderToggleDecorator() : null}
                 <decorators.Header node={node} style={style.header} customStyles={customStyles} onSelect={onSelect}/>
             </div>
         );
