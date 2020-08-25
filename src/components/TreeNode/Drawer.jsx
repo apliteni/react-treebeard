@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {VelocityTransitionGroup} from 'velocity-react';
 
-const Drawer = ({restAnimationInfo, children}) => (
-    <VelocityTransitionGroup {...restAnimationInfo}>
-        {children}
-    </VelocityTransitionGroup>
+const Drawer = ({children}) => (
+    {children}
 );
 
 Drawer.propTypes = {
-    restAnimationInfo: PropTypes.shape({}).isRequired,
     children: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.arrayOf(PropTypes.func, PropTypes.shape({})),
