@@ -6,7 +6,6 @@ import {isArray, isFunction} from 'lodash';
 import {randomString} from '../../util';
 import {Ul} from '../common';
 import NodeHeader from '../NodeHeader';
-import Drawer from './Drawer';
 import Loading from './Loading';
 
 const Li = styled('li', {
@@ -76,7 +75,7 @@ class TreeNode extends PureComponent {
                     onClick={() => this.onClick()}
                     onSelect={isFunction(onSelect) ? (() => onSelect(node)) : undefined}
                 />
-                    {node.toggled & this.renderChildren(decorators)}
+                {node.toggled & this.renderChildren(decorators)}
             </Li>
         );
     }
