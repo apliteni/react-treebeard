@@ -10,22 +10,17 @@ class NodeHeader extends Component {
 
         for (let i = 0; i < nextPropKeys.length; i++) {
             const key = nextPropKeys[i];
-            if (key === 'animations') {
-                continue;
-            }
 
             const isEqual = shallowEqual(props[key], nextProps[key]);
             if (!isEqual) {
                 return true;
             }
         }
-
-        return !deepEqual(props.animations, nextProps.animations, {strict: true});
     }
 
     render() {
         const {
-            animations, decorators, node, onClick, style, onSelect, customStyles
+            decorators, node, onClick, style, onSelect, customStyles
         } = this.props;
         const {active, children} = node;
         const terminal = !children;
@@ -37,7 +32,6 @@ class NodeHeader extends Component {
         }
         return (
             <decorators.Container
-                animations={animations}
                 decorators={decorators}
                 node={node}
                 onClick={onClick}
@@ -54,10 +48,6 @@ NodeHeader.propTypes = {
     style: PropTypes.object.isRequired,
     customStyles: PropTypes.object,
     decorators: PropTypes.object.isRequired,
-    animations: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.bool
-    ]).isRequired,
     node: PropTypes.object.isRequired,
     onClick: PropTypes.func,
     onSelect: PropTypes.func
