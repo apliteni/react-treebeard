@@ -4,19 +4,6 @@ import shallowEqual from 'shallowequal';
 import deepEqual from 'deep-equal';
 
 class NodeHeader extends Component {
-    shouldComponentUpdate(nextProps) {
-        const props = this.props;
-        const nextPropKeys = Object.keys(nextProps);
-
-        for (let i = 0; i < nextPropKeys.length; i++) {
-            const key = nextPropKeys[i];
-
-            const isEqual = shallowEqual(props[key], nextProps[key]);
-            if (!isEqual) {
-                return true;
-            }
-        }
-    }
 
     render() {
         const {
