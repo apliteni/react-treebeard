@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import {isArray, isFunction} from 'lodash';
 
-import defaultAnimations from '../../themes/animations';
 import {randomString} from '../../util';
 import {Ul} from '../common';
 import NodeHeader from '../NodeHeader';
@@ -22,20 +21,6 @@ class TreeNode extends PureComponent {
         }
     }
 
-    animations() {
-        const {animations, node} = this.props;
-        if (!animations) {
-            return {
-                toggle: defaultAnimations.toggle(this.props, 0)
-            };
-        }
-        const animation = Object.assign({}, animations, node.animations);
-        return {
-            toggle: animation.toggle(this.props),
-            drawer: animation.drawer(this.props)
-        };
-    }
-
     decorators() {
         const {decorators, node} = this.props;
         let nodeDecorators = node.decorators || {};
@@ -45,7 +30,7 @@ class TreeNode extends PureComponent {
 
     renderChildren(decorators) {
         const {
-            animations, decorators: propDecorators, node, style, onToggle, onSelect, customStyles
+            decorators: propDecorators, node, style, onToggle, onSelect, customStyles
         } = this.props;
 
         if (node.loading) {
@@ -65,7 +50,6 @@ class TreeNode extends PureComponent {
                     <TreeNode
                         onSelect={onSelect}
                         onToggle={onToggle}
-                        animations={animations}
                         style={style}
                         customStyles={customStyles}
                         decorators={propDecorators}
@@ -82,21 +66,18 @@ class TreeNode extends PureComponent {
             node, style, onSelect, customStyles
         } = this.props;
         const decorators = this.decorators();
-        const animations = this.animations();
-        const {...restAnimationInfo} = animations.drawer;
         return (
             <Li style={style.base}>
                 <NodeHeader
                     decorators={decorators}
-                    animations={animations}
                     node={node}
                     style={style}
                     customStyles={customStyles}
                     onClick={() => this.onClick()}
                     onSelect={isFunction(onSelect) ? (() => onSelect(node)) : undefined}
                 />
-                <Drawer restAnimationInfo={{...restAnimationInfo}}>
-                    {node.toggled ? this.renderChildren(decorators, animations) : null}
+                <Drawer>
+                    {node.toggled ? this.renderChildren(decorators) : null}
                 </Drawer>
             </Li>
         );
@@ -109,11 +90,7 @@ TreeNode.propTypes = {
     style: PropTypes.object.isRequired,
     customStyles: PropTypes.object,
     node: PropTypes.object.isRequired,
-    decorators: PropTypes.object.isRequired,
-    animations: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.bool
-    ]).isRequired
+    decorators: PropTypes.object.isRequired
 };
 
 TreeNode.defaultProps = {
