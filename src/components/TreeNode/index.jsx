@@ -76,9 +76,9 @@ class TreeNode extends PureComponent {
                     onClick={() => this.onClick()}
                     onSelect={isFunction(onSelect) ? (() => onSelect(node)) : undefined}
                 />
-                <Drawer>
+                {/*<Drawer>*/}
                     {node.toggled & this.renderChildren(decorators)}
-                </Drawer>
+                {/*</Drawer>*/}
             </Li>
         );
     }
