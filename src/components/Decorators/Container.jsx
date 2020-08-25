@@ -1,19 +1,11 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {VelocityComponent} from 'velocity-react';
 
 class Container extends PureComponent {
     renderToggle() {
-        const {animations} = this.props;
-
-        if (!animations) {
-            return this.renderToggleDecorator();
-        }
 
         return (
-            <VelocityComponent animation={animations.toggle.animation} duration={animations.toggle.duration}>
-                {this.renderToggleDecorator()}
-            </VelocityComponent>
+            {this.renderToggleDecorator()}
         );
     }
 
@@ -42,10 +34,6 @@ Container.propTypes = {
     terminal: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     onSelect: PropTypes.func,
-    animations: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.bool
-    ]).isRequired,
     node: PropTypes.object.isRequired
 };
 
