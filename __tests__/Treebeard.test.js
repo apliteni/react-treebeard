@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Treebeard from "../src/components/Treebeard";
+import Treebeard from "../src/components";
 import data from "./mocks/data";
 
 const renderComponent = (props = {}) => {
