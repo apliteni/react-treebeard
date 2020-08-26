@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 
 class Container extends PureComponent {
-  handleClickHead = (e) => {
+  handleClickHead(e) {
     const { onSelect, onClick } = this.props;
     onSelect(e);
     onClick(e);
-  };
+  }
 
   renderToggle() {
     const { style, decorators, onClick } = this.props;
