@@ -15,34 +15,30 @@ exports[`<Treebeard/> should match default snapshot 1`] = `
   }
 >
   <TreeNode
-    animations={
-      Object {
-        "drawer": [Function],
-        "toggle": [Function],
-      }
-    }
     customStyles={Object {}}
     decorators={
       Object {
-        "Container": [Function],
-        "Header": [Function],
-        "Loading": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "__emotion_base": [Function],
-          "__emotion_forwardProp": undefined,
-          "__emotion_real": [Circular],
-          "__emotion_styles": Array [
-            [Function],
-          ],
-          "defaultProps": undefined,
-          "displayName": "Styled(Component)",
-          "propTypes": Object {
-            "style": [Function],
+        "default": Object {
+          "Container": [Function],
+          "Header": [Function],
+          "Loading": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "__emotion_base": [Function],
+            "__emotion_forwardProp": undefined,
+            "__emotion_real": [Circular],
+            "__emotion_styles": Array [
+              [Function],
+            ],
+            "defaultProps": undefined,
+            "displayName": "Styled(Component)",
+            "propTypes": Object {
+              "style": [Function],
+            },
+            "render": [Function],
+            "withComponent": [Function],
           },
-          "render": [Function],
-          "withComponent": [Function],
+          "Toggle": [Function],
         },
-        "Toggle": [Function],
       }
     }
     key="1"
@@ -79,10 +75,10 @@ exports[`<Treebeard/> should match default snapshot 1`] = `
               Object {
                 "children": Array [
                   Object {
-                    "name": "decorators.js",
+                    "name": "Decorators.jsx",
                   },
                   Object {
-                    "name": "treebeard.js",
+                    "name": "Treebeard.jsx",
                   },
                 ],
                 "name": "components",
@@ -95,9 +91,6 @@ exports[`<Treebeard/> should match default snapshot 1`] = `
           },
           Object {
             "children": Array [
-              Object {
-                "name": "animations.js",
-              },
               Object {
                 "name": "default.js",
               },
@@ -116,6 +109,7 @@ exports[`<Treebeard/> should match default snapshot 1`] = `
         ],
         "id": 1,
         "name": "react-treebeard",
+        "terminal": true,
         "toggled": true,
       }
     }
