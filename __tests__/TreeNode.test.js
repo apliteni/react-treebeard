@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import TreeNode from "../src/components/TreeNode/TreeNode";
+import TreeNode from "../src/components/TreeNode";
 import defaultTheme from "../src/themes/default";
-import defaultDecorators from "../src/components/Decorators/Decorators";
+import defaultDecorators from "../src/components/Decorators";
 import data from "./mocks/data";
 
 const onToggle = jest.fn();
