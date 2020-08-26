@@ -5,8 +5,8 @@ import { castArray } from 'lodash';
 import defaultTheme from '../themes/default';
 import { randomString } from '../util';
 import { Ul } from './common';
-import * as defaultDecorators from './Decorators/Decorators';
-import TreeNode from './TreeNode/TreeNode';
+import * as defaultDecorators from './Decorators';
+import TreeNode from './TreeNode';
 
 const TreeBeard = ({
   decorators,
