@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import NodeHeader from "../src/components/NodeHeader";
+import NodeHeader from "../src/components";
 import defaultTheme from "../src/themes/default";
-import defaultDecorators from "../src/components/Decorators/Decorators";
+import defaultDecorators from "../src/components/Decorators";
 import data from "./mocks/data";
 
 const onClick = jest.fn();
