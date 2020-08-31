@@ -2,7 +2,7 @@
   "name": "react-treebeard",
   "version": "3.2.4-modify",
   "description": "React Tree View Component",
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
     "dist",
     "src",
