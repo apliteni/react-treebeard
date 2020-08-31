@@ -1,4 +1,4 @@
-import { Treebeard, decorators } from './src';
+var { Treebeard, decorators } = require('./dist');
 module.exports = {
   Treebeard,
   decorators,
