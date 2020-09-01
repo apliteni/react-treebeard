@@ -9,41 +9,41 @@ import * as defaultDecorators from './Decorators';
 import TreeNode from './TreeNode';
 
 const TreeBeard = ({
-  decorators,
-  data,
-  onToggle,
-  style,
-  onSelect,
-  customStyles,
+    decorators,
+    data,
+    onToggle,
+    style,
+    onSelect,
+    customStyles,
 }) => (
-  <Ul style={{ ...defaultTheme.tree.base, ...style.tree.base }}>
-    {castArray(data).map((node) => (
-      <TreeNode
-        decorators={decorators}
-        node={node}
-        onToggle={onToggle}
-        onSelect={onSelect}
-        customStyles={customStyles}
-        key={node.id || randomString()}
-        style={{ ...defaultTheme.tree.node, ...style.tree.node }}
-      />
-    ))}
-  </Ul>
+    <Ul style={{ ...defaultTheme.tree.base, ...style.tree.base }}>
+        {castArray(data).map((node) => (
+            <TreeNode
+                decorators={decorators}
+                node={node}
+                onToggle={onToggle}
+                onSelect={onSelect}
+                customStyles={customStyles}
+                key={node.id || randomString()}
+                style={{ ...defaultTheme.tree.node, ...style.tree.node }}
+            />
+        ))}
+    </Ul>
 );
 
 TreeBeard.propTypes = {
-  style: PropTypes.object,
-  customStyles: PropTypes.object,
-  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-  onToggle: PropTypes.func,
-  onSelect: PropTypes.func,
-  decorators: PropTypes.object,
+    style: PropTypes.object,
+    customStyles: PropTypes.object,
+    data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+    onToggle: PropTypes.func,
+    onSelect: PropTypes.func,
+    decorators: PropTypes.object,
 };
 
 TreeBeard.defaultProps = {
-  style: defaultTheme,
-  decorators: defaultDecorators,
-  customStyles: {},
+    style: defaultTheme,
+    decorators: defaultDecorators,
+    customStyles: {},
 };
 
 export default TreeBeard;
