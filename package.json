@@ -4,7 +4,7 @@
   "description": "React Tree View Component",
   "main": "index.js",
   "files": [
-    "src",
+    "dist",
     "index.js"
   ],
   "scripts": {
