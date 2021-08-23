@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      "react-treebeard@https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+      "/Users/a.naumcev/Documents/apliteni/keitaro-app"
+    ]
+  ],
+  "_from": "react-treebeard@https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+  "_id": "react-treebeard@https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+  "_inBundle": false,
+  "_integrity": "sha512-3FgeJu3NRVYCL8rjkoVxx1FHc/FzGaQu4WF6ShaUr5cGJkfd1lGrb6C/+CvO0M8I/HbqPtWJP+iH44xoqkcrrQ==",
+  "_location": "/react-treebeard",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "react-treebeard@https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+    "name": "react-treebeard",
+    "escapedName": "react-treebeard",
+    "rawSpec": "https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+    "saveSpec": "https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+    "fetchSpec": "https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": false,
+  "_spec": "https://github.com/apliteni/react-treebeard/releases/download/v3.2.4-modify/react-treebeard-3.2.4-modify.tgz",
+  "_where": "/Users/a.naumcev/Documents/apliteni/keitaro-app",
+  "author": {
+    "name": "Alex Curtis"
+  },
+  "bugs": {
+    "url": "https://github.com/storybookjs/react-treebeard/issues"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27"
+  },
+  "description": "React Tree View Component",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/travis-cli": "^8.3.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.4",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "homepage": "https://github.com/storybooks/react-treebeard#readme",
+  "keywords": [
+    "react",
+    "treeview",
+    "data-driven",
+    "customisable",
+    "fast"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-treebeard",
+  "peerDependencies": {
+    "@babel/runtime": ">=7.0.0",
+    "@emotion/styled": "^10.0.10",
+    "prop-types": ">=15.7.2",
+    "react": ">=16.7.0",
+    "react-dom": ">=16.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storybookjs/react-treebeard.git"
+  },
+  "scripts": {
+    "build-example": "webpack --content-base ./example/ --config ./example/webpack.config.js --output ./dist/example.js",
+    "example": "webpack-dev-server --content-base ./example/ --config ./example/webpack.config.js",
+    "lint": "eslint . --fix",
+    "prepare": "rimraf dist && babel src/ --out-dir dist/",
+    "test": "jest --config=jest.config.js",
+    "test:coverage": "jest --config=jest.config.js --coverage",
+    "test:watch": "jest --config=jest.config.js --watch"
+  },
+  "version": "3.2.4-modify"
+}
